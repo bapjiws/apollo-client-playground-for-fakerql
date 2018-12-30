@@ -12,11 +12,12 @@ const { InMemoryCache } = require('apollo-cache-inmemory');
 const gql = require('graphql-tag');
 const fetch = require('node-fetch');
 
-const link = ApolloLink.from([new HttpLink({uri: 'https://fakerql.com/graphql', fetch})]);
-
 const cache = new InMemoryCache();
 
-const client = new ApolloClient({link, cache});
+const client = new ApolloClient({
+  link: ApolloLink.from([new HttpLink({uri: 'https://fakerql.com/graphql', fetch})]),
+  cache
+});
 
 client.query({query: gql`
   query Users {
