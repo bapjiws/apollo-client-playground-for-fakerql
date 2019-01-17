@@ -1,16 +1,9 @@
-// ES6 version
-// import { ApolloClient } from 'apollo-client';
-// import { ApolloLink } from 'apollo-link';
-// import { HttpLink } from 'apollo-link-http';
-// import { InMemoryCache } from 'apollo-cache-inmemory';
-// import gql from 'graphql-tag';
-// import fetch from 'node-fetch';
-const { ApolloClient } = require('apollo-client');
-const { ApolloLink } = require('apollo-link');
-const { HttpLink } = require('apollo-link-http');
-const { InMemoryCache } = require('apollo-cache-inmemory');
-const gql = require('graphql-tag');
-const fetch = require('node-fetch');
+import { ApolloClient } from 'apollo-client';
+import { ApolloLink } from 'apollo-link';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import gql from 'graphql-tag';
+import fetch from 'node-fetch';
 
 const cache = new InMemoryCache();
 
