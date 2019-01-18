@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -7,6 +8,9 @@ module.exports = {
 	publicPath: '/', // TODO: double-check this.
 	filename: 'bundle.js'
   },
+  plugins: [
+	new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
 	rules: [
 	  {
@@ -20,6 +24,7 @@ module.exports = {
 	extensions: ['*', '.js', '.jsx']
   },
   devServer: {
-	contentBase: './dist'
+	contentBase: './dist',
+	hot: true
   }
 };

@@ -8,3 +8,5 @@ const App = () => (
 );
 
 render(<App />, document.getElementById("root"));
+
+module.hot.accept();
