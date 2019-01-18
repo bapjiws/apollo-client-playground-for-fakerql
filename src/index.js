@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 const App = () => (
   <div>
-	<h2>My first Apollo app 🚀</h2>
+	<h2>My cool Apollo app! 🚀</h2>
   </div>
 );
 

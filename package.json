@@ -2,9 +2,10 @@
   "name": "apollo-playground-for-fakerql",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon --exec 'npx babel-node server.js'",
+    "start:client": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "start:server": "nodemon --exec 'npx babel-node --config-file ./.babelnoderc server.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,12 +25,19 @@
     "apollo-link-http": "^1.5.9",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "webpack-dev-server": "^3.1.14"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
-    "nodemon": "^1.18.9"
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "nodemon": "^1.18.9",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   }
 }
